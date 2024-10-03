@@ -7,12 +7,13 @@
 }
 
 :root{
-    --bg:   #6a3d10;
-    --ht:   #552a01;
-    --btt:  #A52A2A;
-    --text: #cecdcd;
-    --sec:  #C2B280;
-    --hov:  #FF6347;
+    --bg:      #c6eaffbd;
+    --ht:      #65a2c5d5;
+    --ht-text: #ffffff;
+    --btt:     #A52A2A;
+    --text:    #000000;
+    --sec:     #e2c15c;
+    --hov:     #FF6347;
 }
 body{
     color: var(--text);
@@ -29,8 +30,9 @@ header{
 }
 header img{
     width: 125px;
+
     border-radius: 50%;
-    border: 1px solid var(--sec);
+    border: 2px solid var(--sec);
     margin: 15px 5px 15px 15px;
 }
 .logo{
@@ -40,7 +42,7 @@ header img{
 .logo h1{
     font-size: 1.5rem;
     margin-left: 15px;
-    color: var(--text);
+    color: var(--ht-text);
 }
 /* menu */
 nav .nav{
@@ -55,7 +57,7 @@ nav .nav{
 }
 nav a{
     text-decoration: none;
-    color: var(--text);
+    color: var(--ht-text);
     font-size: 0.8rem;
     font-weight: bold;
     padding: 10px;
@@ -75,7 +77,7 @@ nav a:hover{
 .novidades img{
     display: block;
     border-radius: 5PX;
-    border: 1px solid var(--sec);
+    border: 2px solid var(--sec);
     box-shadow: 2px 2px 10px #00000063;
     width: 100%;
     height: 400px;
@@ -93,7 +95,7 @@ nav a:hover{
     border-radius: 10px;
     font-weight: bold;
     transition: .5s;
-    color: var(--text);
+    color: var(--ht-text);
     background: var(--btt);
 }
 .button a:hover{
@@ -111,7 +113,7 @@ nav a:hover{
 .imagem {
     border-radius: 10px;
     margin-left: 15px;
-    border: 1px solid var(--sec);
+    border: 2px solid var(--sec);
     box-shadow: 2px 2px 10px #00000063;
 }
 .texto {
@@ -120,12 +122,13 @@ nav a:hover{
     margin: auto;
 }
 
-.texto h2 {
+.texto h3 {
     margin-bottom: 25px;
     text-indent: 50px;
 }
 .texto p{
     letter-spacing: 1px;
+    margin-top: 10px;
     line-height: 20px;
     
 }
@@ -136,35 +139,44 @@ nav a:hover{
     display: block;
     text-align: center;
 }
+.especialista h2{
+    margin-bottom: 20px;
+}
 .especialista ul{
     margin: auto;
     margin-top: 15px;
     max-width: 750px;
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 .especialista li{
     list-style: none;
-    padding: 10px;
+    padding: 5px;
 }
 .especialista img{
     border-radius: 10px;
-    border: 1px solid var(--sec);
+    margin-bottom: 15px;
+    width: 202px;
+    border: 2px solid var(--sec);
     box-shadow: 2px 2px 10px #00000063;
 }
+.especialista strong{
+    display: block;
+    margin-bottom: 10px;
+}
 .especialista p{
-    margin: 8px auto;
-    max-width: 150px;
+    margin: 0 auto;
+    max-width: 200px;
 }
 
 /* algumas infomação */
 .loc-hora{
     display: flex;
     font-size: 1.1rem;
+    color: var(--ht-text);
     border: 1px solid var(--sec);
     justify-content: space-between;
     background-color: var(--ht);
@@ -198,7 +210,7 @@ nav a:hover{
 }
 .social a{
     text-decoration: underline;
-    color: var(--text);
+    color: var(--ht-text);
 }
 /* localização */
 .loc h3{
@@ -217,6 +229,7 @@ nav a:hover{
 footer{
     background-color: var(--ht);
     text-align: center;
+    color: var(--ht-text);
     padding: 10px;
     font-size: 0.8rem;
 }
@@ -230,9 +243,9 @@ footer{
     }
     .imagem {
         display: block;
-        margin: 0 auto;
+        margin: 15px auto;
     }
-    .texto h2 {
+    .texto h3 {
         margin-top: 20px;
         margin-bottom: 20px;
         text-align: center;
@@ -259,13 +272,15 @@ footer{
     }
     .imagem {
         display: block;
-        margin: 0 auto;
+        margin: 15px auto;
     }
-    .texto h2 {
-        margin-top: 20px;
+    .texto h3 {
         margin-bottom: 20px;
         text-align: center;
         text-indent: 0px;
+    }
+    .info p{
+        max-width: 500px;
     }
     /* algumas infomação */
     .horario{
@@ -294,7 +309,7 @@ footer{
     .social a{
         font-size: 0.9rem;
         text-decoration: underline;
-        color: var(--text);
+        color: var(--ht-text);
     }
     /* localização */
     .loc h3{
@@ -330,7 +345,7 @@ footer{
         margin: 0 auto;
     }
     
-    .texto h2 {
+    .texto h3 {
         margin-bottom: 25px;
         text-indent: 0px;
         text-align: center;
@@ -386,7 +401,7 @@ footer{
     }
     .social a{
         text-decoration: underline;
-        color: var(--text);
+        color: var(--ht-text);
     }
     /* localização */
     .loc{
@@ -435,6 +450,32 @@ footer{
     }
     .imagem {
         width: 100%;
+    }
+    /* Proficionais */
+    .box-espe{
+        max-width: 170px;
+    }
+    .especialista{
+        display: block;
+        margin: 0;
+    }
+    .especialista ul{
+        margin: 0 auto;
+        width: 450px;
+        gap: 10px;
+    }
+    .especialista img{
+        width: 80px;
+    }
+    .especialista h2{
+        font-size: 1rem;
+    }
+    .especialista p{
+        max-width: 150px;
+        width: 100px;
+        height: 100px;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
     }
 }
 
@@ -485,6 +526,7 @@ footer{
     .info {
         display: block;
         margin: auto;
+        padding: 10px;
     }
     .imagem {
         width: 100%;
@@ -495,12 +537,16 @@ footer{
         max-width: 100%;
         margin: auto;
     }
-    .texto h2 {
+    .texto h3 {
         text-align: center;
         font-size: 1rem;
         margin-bottom: 20px;
     }
     .texto p{
+        margin: auto;
+        margin-top: 10px;
+        font-size: 0.8rem;
+        max-width: 300px;
         letter-spacing: 1px;
         line-height: 20px;
     }
@@ -570,5 +616,28 @@ footer{
         font-size: 0.5rem;
         letter-spacing: 1px;
         font-weight: 400;
+    }
+}
+
+@media (max-width: 410px){
+    /* Proficionais */
+    .especialista{
+        display: block;
+        margin-top: 15px;
+    }
+    .especialista ul{
+        margin-top: 15px;
+        max-width: 250px;
+        gap: 10px;
+    }
+    .especialista img{
+        width: 80px;
+    }
+    .especialista h2{
+        font-size: 1rem;
+    }
+    .especialista p{
+        font-size: 0.6rem;
+        letter-spacing: 1px;
     }
 }
