@@ -8,18 +8,36 @@
 
 :root{
     --bg:      #c6eaffbd;
-    --ht:      #65a2c5d5;
+    --ht:      #135d88d5;
+    --stro:    #0065a0;
+    --home:    #65a2c5d5;
     --ht-text: #ffffff;
-    --btt:     #A52A2A;
+    --btt:     #083e5e;
     --text:    #000000;
     --sec:     #e2c15c;
-    --hov:     #FF6347;
+    --hov:     #c6eaffb4;
 }
 body{
     color: var(--text);
     width: 100%;
     background: var(--bg);
 }
+strong{
+    color: var(--stro);
+    font-weight: bold;
+}
+/* Whatsapp */
+.whatsapp{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+.whatsapp a{
+   font-size: 60px;
+   color: #25D366;
+}
+/* Fim do Whatsapp */
 
 /* header */
 header{
@@ -29,11 +47,10 @@ header{
     align-items: end;
 }
 header img{
-    width: 125px;
-
+    width: 60px;
     border-radius: 50%;
     border: 2px solid var(--sec);
-    margin: 15px 5px 15px 15px;
+    margin: 15px 5px 15px 25px;
 }
 .logo{
     display: flex;
@@ -63,48 +80,98 @@ nav a{
     padding: 10px;
     background: var(--btt);
     border-radius: 10px;
-    transition: .5s;
+    transition: 1s;
 }
 nav a:hover{
     background: var(--hov);
 }
 
 /* Corpo */
-/* noviddes */
-.novidades{
-    margin: 15px;
+/* HOME */
+.home{
+    display: flex;
+    height: 100vh;
+    background: var(--home);
+    align-items: center;
+    justify-content: space-between;
 }
-.novidades img{
+.text{
+    cursor: default;
+    color: var(--ht-text);
+}
+.text h3{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3.6rem;
+    padding: 25px;
+}
+.text p{
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 40px;
+    margin-bottom: 70px;
+    padding: 25px;
+}
+.text a{
     display: block;
-    border-radius: 5PX;
-    border: 2px solid var(--sec);
-    box-shadow: 2px 2px 10px #00000063;
-    width: 100%;
-    height: 400px;
-    margin: auto;
+    margin: 0 auto;
+    width: 250px;
+    color: var(--ht-text);
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    background: var(--ht);
 }
-.button{
+.img{
+    padding: 40px;
+}
+.img img{
+    border-radius: 15px;
+}
+/* FIM DO HOME */
+
+/* EXAMES */
+#exame{
+    cursor: default;
+    height: 70vh;
+    margin: 0 auto;
+    background: var(--ht);
+    text-align: center;
+}
+#exame h3{
+    padding-top: 50px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: 900;
+    color: var(--ht-text);
+}
+.exames{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.button a{
-    text-decoration: none;
-    padding: 10px;
-    margin-top: 15px;
-    margin-bottom: 30px;
+.lista{
+    display: flex;
+    border: 1px solid var(--sec);
     border-radius: 10px;
-    font-weight: bold;
-    transition: .5s;
+}
+.lista ul{
+    padding: 40px;
+}
+.lista li{
+    text-align: left;
+    letter-spacing: 2px;
+    list-style: none;
     color: var(--ht-text);
-    background: var(--btt);
+    margin-bottom: 15px;
 }
-.button a:hover{
-    background: var(--hov);
-    color: var(--btt);
-}
+/* FIM DOS EXAMES */
 
-/* info - sobre */
-.info {
+/* SOBRE NOS */
+.sobre-nos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -121,38 +188,52 @@ nav a:hover{
     max-width: 50%;
     margin: auto;
 }
-
+.texto h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
 .texto h3 {
+    text-align: center;
     margin-bottom: 25px;
-    text-indent: 50px;
+    font-size: 1.6rem;
 }
 .texto p{
     letter-spacing: 1px;
     margin-top: 10px;
+    font-size: 1.2rem;
     line-height: 20px;
     
 }
+/* FIM DE SOBRE NOS */
 
-/* Proficionais */
+/* PROFICIONAIS */
 .especialista{
-    margin-top: 30px;
     display: block;
+    height: 130vh;
+    background: var(--home);
+    margin-top: 30px;
     text-align: center;
 }
 .especialista h2{
-    margin-bottom: 20px;
+    padding-top: 25px;
+    color: var(--ht-text);
+}
+.especialista h4{
+    font-size: 1.1rem;
 }
 .especialista ul{
+    display: flex;
     margin: auto;
     margin-top: 15px;
     max-width: 750px;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 .especialista li{
+    overflow: hidden;
     list-style: none;
     padding: 5px;
 }
@@ -169,19 +250,22 @@ nav a:hover{
 }
 .especialista p{
     margin: 0 auto;
+    color: var(--ht-text);
+    letter-spacing: 1px;
+    height: 100px;
     max-width: 200px;
 }
+/* FIM DE PROFICIONAIS */
 
 /* algumas infomação */
 .loc-hora{
     display: flex;
     font-size: 1.1rem;
     color: var(--ht-text);
-    border: 1px solid var(--sec);
     justify-content: space-between;
     background-color: var(--ht);
-    margin-top: 30px;
     padding: 25px;
+    padding-top: 30px;
 }
 
 /* horário */
