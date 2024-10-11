@@ -22,6 +22,18 @@
                     <li class="menu"><a href="https://wa.me/5598984264190?text=Olá!" target="_blank">CONTATO</a></li>
                 </ul>
             </nav>
+            <nav class="nav-mobile">
+                <button onclick="toggleMenu()">
+                    <img src="assets/menu-outline.svg" alt="" class="menu-button">
+                </button>
+                <ul class="mobile-nav" id="mobileNav">
+                    <li class="mobile-menu"><a href="#home">HOME</a></li>
+                    <li class="mobile-menu"><a href="#exame">EXAME</a></li>
+                    <li class="mobile-menu"><a href="#sobre">SOBRE</a></li>
+                    <li class="mobile-menu"><a href="#especialista">ESPECIALISTA</a></li>
+                    <li class="mobile-menu"><a href="" target="_blank">CONTATO</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
             <section class="whatsapp">
@@ -183,5 +195,15 @@
         nomodule
         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
         </script>
+        <!-- script menu-mobile -->
+        <script>
+            function toggleMenu() {
+                const nav = document.getElementById('mobileNav');
+            
+                // Adiciona ou remove a classe 'active' ao menu
+                nav.classList.toggle('active');
+            }
+        </script>       
+        <!-- script menu-mobile -->
     </body>
 </html>

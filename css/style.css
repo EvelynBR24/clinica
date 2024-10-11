@@ -62,7 +62,7 @@ header img{
     margin-left: 15px;
     color: var(--ht-text);
 }
-/* menu */
+/* MENU */
 nav .nav{
     display: flex;
     text-align: center;
@@ -86,6 +86,8 @@ nav a{
 nav a:hover{
     background: var(--hov);
 }
+
+/* FIM DO MENU */
 
 /* Corpo */
 /* HOME */
@@ -747,26 +749,66 @@ footer{
 @media (max-width: 550px){
     /* header */
     header{
-        display: block;
-        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        width: 80px;
+        margin-left: 25px;
+    }
+    .logo h1{
+        display: flex;
     }
     header img{
         display: block;
         margin: 15px auto;
         width: 125px;
     }
-    /* menu */
+    /* menu-pc */
     nav .nav{
-        display: flex;
-        text-align: center;
-        margin: 0;
-        justify-content: center;
+        display: none;
     }
-    .menu{
+    /* fim do menu-pc */
+
+    /* MENU-MOBILE */
+    .nav-mobile{
         display: flex;
-        margin: 5px;
-        margin-bottom: 15px;
+        position: relative;
     }
+    .menu-button{
+        border: none;
+    }
+    button{
+        background: #135d8800;
+        border: none;
+    }
+    img.menu-button{
+        width: 40px;
+        margin: 5px 10px 80px 90px;
+    }
+    .mobile-nav{
+        display: none;
+        background-color: var(--btt);
+        padding-top: 10px;
+        width: 140px;
+        border-radius: 10px 0 0 10px;
+        z-index: 800;
+        position: absolute;
+        top: 35%;
+        right: 0;
+
+    }
+    .mobile-nav li{
+        margin-bottom: 20px;
+        margin-right: 20px;
+        list-style: none;
+        text-align: right;
+    }
+    .mobile-nav.active {
+        display: block;
+    }
+    /* FIM DO MENU-MOBILE */
+
     /* info - sobre */
     .info {
         padding: none;
