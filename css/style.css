@@ -10,6 +10,7 @@
     --bg:      #c6eaffbd;
     --ht:      #135d88d5;
     --stro:    #0065a0;
+    --sobre:   #3894cad2;
     --home:    #65a2c5d5;
     --ht-text: #ffffff;
     --btt:     #083e5e;
@@ -20,7 +21,6 @@
 body{
     color: var(--text);
     width: 100%;
-    background: var(--bg);
 }
 strong{
     color: var(--stro);
@@ -41,6 +41,7 @@ strong{
 
 /* header */
 header{
+    cursor: default;
     display: flex;
     background: var(--ht);
     justify-content: space-between;
@@ -77,7 +78,7 @@ nav a{
     color: var(--ht-text);
     font-size: 0.8rem;
     font-weight: bold;
-    padding: 10px;
+    padding: 15px;
     background: var(--btt);
     border-radius: 10px;
     transition: 1s;
@@ -90,8 +91,9 @@ nav a:hover{
 /* HOME */
 .home{
     display: flex;
-    height: 100vh;
+    height: auto;
     background: var(--home);
+    padding: 20px;
     align-items: center;
     justify-content: space-between;
 }
@@ -101,20 +103,17 @@ nav a:hover{
 }
 .text h3{
     text-align: center;
-    margin-bottom: 30px;
     font-size: 3.6rem;
-    padding: 25px;
+    padding-bottom: 30px;
 }
 .text p{
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     line-height: 40px;
-    margin-bottom: 70px;
-    padding: 25px;
 }
 .text a{
     display: block;
-    margin: 0 auto;
+    margin: 50px auto;
     width: 250px;
     color: var(--ht-text);
     padding: 5px;
@@ -125,7 +124,8 @@ nav a:hover{
     background: var(--ht);
 }
 .img{
-    padding: 40px;
+    padding-right: 60px;
+    padding: 20px;
 }
 .img img{
     border-radius: 15px;
@@ -135,7 +135,7 @@ nav a:hover{
 /* EXAMES */
 #exame{
     cursor: default;
-    height: 70vh;
+    height: auto;
     margin: 0 auto;
     background: var(--ht);
     text-align: center;
@@ -143,7 +143,7 @@ nav a:hover{
 #exame h3{
     padding-top: 50px;
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     letter-spacing: 2px;
     font-family: 900;
     color: var(--ht-text);
@@ -159,27 +159,35 @@ nav a:hover{
     border-radius: 10px;
 }
 .lista ul{
-    padding: 40px;
+    padding: 100px;
 }
 .lista li{
     text-align: left;
+    font-size: 1.4rem;
     letter-spacing: 2px;
     list-style: none;
     color: var(--ht-text);
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 /* FIM DOS EXAMES */
 
 /* SOBRE NOS */
 .sobre-nos {
+    cursor: default;
     display: flex;
     flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+    color: var(--ht-text);
+    background-color: var(--sobre);
     justify-content: space-between;
     padding: 20px;
 }
 .imagem {
     border-radius: 10px;
     margin-left: 15px;
+    width: 500px;
+    height: 550px;
     border: 2px solid var(--sec);
     box-shadow: 2px 2px 10px #00000063;
 }
@@ -189,20 +197,20 @@ nav a:hover{
     margin: auto;
 }
 .texto h1{
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
 .texto h3 {
     text-align: center;
     margin-bottom: 25px;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
 }
 .texto p{
     letter-spacing: 1px;
     margin-top: 10px;
-    font-size: 1.2rem;
-    line-height: 20px;
+    font-size: 1.4rem;
+    line-height: 30px;
     
 }
 /* FIM DE SOBRE NOS */
@@ -210,9 +218,8 @@ nav a:hover{
 /* PROFICIONAIS */
 .especialista{
     display: block;
-    height: 130vh;
+    height: auto;
     background: var(--home);
-    margin-top: 30px;
     text-align: center;
 }
 .especialista h2{
@@ -319,192 +326,424 @@ footer{
 }
 
 /* media queries */
-@media (max-width: 885px){
-    /* info - sobre*/
-    .info {
-        display: block;
-        margin: auto;
+@media (max-width: 1175px){
+    /* HOME */
+    .text h3{
+        font-size: 2.4rem;
     }
+    .text p{
+        font-size: 1.6rem;
+        line-height: 35px;
+    }
+    .text a{
+        font-size: 1.5rem;
+    }
+    /* FIM DO HOME */
+
+    /* EXAMES */
+    #exame{
+        height: auto;
+        padding-bottom: 25px;
+    }
+    #exame h3{
+        font-size: 2rem;
+    }
+    .lista ul{
+        padding: 80px;
+    }
+    .lista li{
+        text-align: left;
+        font-size: 1.4rem;
+    }
+    /* FIM DOS EXAMES */
+
+    /* SOBRE NOS */
+    .sobre-nos {
+        padding: 15px;
+    }
+    .imagem {
+        width: 450px;
+        height: 500px;
+    }
+    .texto h1{
+        font-size: 2.4rem;
+        margin-bottom: 25px;
+    }
+    .texto h3 {
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+    }
+    .texto p{
+        line-height: 25px;
+    }
+    /* FIM DE SOBRE NOS */
+}
+
+@media (max-width: 1000px){
+    /* HOME */
+    .text h3{
+        font-size: 1.9rem;
+    }
+    .text p{
+        font-size: 1.6rem;
+        line-height: 30px;
+    }
+    .text a{
+        margin: 25px auto;
+    }
+    .img img{
+        width: 350px;
+        height: 450px;
+    }
+    /* FIM DO HOME */
+
+    /* EXAMES */
+    #exame h3{
+        font-size: 1.8rem;
+    }
+    .lista ul{
+        padding: 50px;
+    }
+    .lista li{
+        text-align: left;
+        font-size: 1.2rem;
+    }
+    .lista li p{
+        margin: 10px;
+    }
+    /* FIM DOS EXAMES */
+
+    /* SOBRE NOS */
+    .imagem {
+        margin-left: 0;
+        width: 450px;
+        height: 500px;
+    }
+    .texto h1{
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    .texto h3 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+    .texto p{
+        line-height: 25px;
+        font-size: 1.1rem;
+    }
+    /* FIM DE SOBRE NOS */
+}
+
+@media (max-width: 885px){
+    /* MENU */
+    nav a{
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+    /* FIM DO MENU */
+
+    /* HOME */
+    .text h3{
+        font-size: 1.7rem;
+    }
+    .text p{
+        font-size: 1.4rem;
+    }
+    .text a{
+        font-size: 1.3rem;
+    }
+    /* FIM DO HOME */
+
+    /* SOBRE NOS */
     .imagem {
         display: block;
         margin: 15px auto;
+        width: 450px;
+        height: 450px;
+    }
+    .texto{
+        max-width: 700px;
+    }
+    .texto h1{
+        display: none;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
     }
     .texto h3 {
         margin-top: 20px;
         margin-bottom: 20px;
-        text-align: center;
-        text-indent: 0px;
+        font-size: 1.5rem;
     }
+    .texto p{
+        line-height: 25px;
+        font-size: 1.3rem;
+    }
+    /* FIM DE SOBRE NOS */
 }
 
 @media (max-width: 780px) {
-    /* header*/
+    /* HEADER */
     .logo h1{
-        display: none;
+        font-size: 1.4rem;
     }
-    header{
-        align-items: center;
+        /* MENU */
+    nav .nav{
+        margin-bottom: 15px;
+        margin-right: 5px;
     }
-    /* menu */
-    ul.nav{
-        margin-bottom: 0;
+    nav a{
+        font-size: 0.7rem;
+        padding: 8px;
     }
-    /* info - sobre*/
-    .info {
-        display: block;
-        margin: auto;
+        /* FIM DO MENU */
+    /* FIM DO HEADER */
+
+    /* HOME */
+    .text h3{
+        font-size: 1.3rem;
+        padding-bottom: 15px;
     }
+    .text p{
+        font-size: 1.14rem;
+        line-height: 30px;
+    }
+    .text a{
+        margin: 25px auto;
+        font-size: 0.8rem;
+    }
+    .img img{
+        width: 300px;
+        height: 400px;
+    }
+    /* FIM DO HOME */
+
+    /* EXAMES */
+    #exame h3{
+        padding-top: 20px;
+        font-size: 1.2rem;
+    }
+    .lista ul{
+        padding: 15px;
+    }
+    .lista li{
+        font-size: 1.1rem;
+    }
+    .lista li p{
+        margin: 0px;
+    }
+    /* FIM DOS EXAMES */
+
+    /* SOBRE NOS */
     .imagem {
         display: block;
         margin: 15px auto;
+        width: 300px;
+        height: 300px;
+    }
+    .texto{
+        max-width: 650px;
     }
     .texto h3 {
+        margin-top: 20px;
         margin-bottom: 20px;
-        text-align: center;
-        text-indent: 0px;
+        font-size: 1.4rem;
     }
-    .info p{
+    .texto p{
+        line-height: 25px;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    /* FIM DE SOBRE NOS */
+
+}
+
+@media (max-width: 700px) {
+    /* Whatsapp */
+    .whatsapp{
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .whatsapp a{
+        font-size: 50px;
+        color: #25D366;
+    }
+    /* Fim do Whatsapp */
+
+    /* HEADER */
+    .logo h1{
+        display: none;
+    }
+    /* FIM DO HEADER */
+
+    /* HOME */
+    .text h3{
+        font-size: 1.15rem;
+        padding-bottom: 10px;
+    }
+    .text p{
+        font-size: 1rem;
+        line-height: 25px;
+    }
+    .text a{
+        margin: 10px auto;
+    }
+    .img img{
+        width: 250px;
+        height: 350px;
+    }
+    /* FIM DO HOME */
+
+    /* EXAMES */
+    #exame h3{
+        padding-top: 20px;
+        font-size: 1.15rem;
+    }
+    .lista ul{
+        padding: 10px;
+    }
+    .lista li{
+        font-size: 0.8rem;
+    }
+    .lista li p{
+        margin: 0px;
+    }
+    /* FIM DOS EXAMES */
+
+    /* SOBRE NOS */
+    .imagem {
+        display: block;
+        margin: 15px auto;
+        width: 300px;
+        height: 300px;
+    }
+    .texto{
         max-width: 500px;
     }
-    /* algumas infomação */
+    .texto h3 {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 1.15rem;
+    }
+    .texto p{
+        line-height: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    /* FIM DE SOBRE NOS */
+
+    /* PROFICIONAIS */
+    .especialista h2{
+        padding-top: 10px;
+    }
+    .especialista h4{
+        font-size: 1.14rem;
+    }
+    .especialista ul{
+        max-width: 600px;
+    }
+    .especialista img{
+        width: 180px;
+    }
+    .especialista p{
+        font-size: 0.9rem;
+    }
+    /* FIM DE PROFICIONAIS */
+
+    /* INFORMAÇÕES */
+    .loc-hora{
+        font-size: 0.9rem;
+        padding: 20px;
+    }
+        /* HORÁRIO */
     .horario{
         font-size: 0.9rem;
     }
     .horario h3{
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.15rem;
     }
     .horario p{
-        text-align: left;
         margin-top: 5px;
     }
-    /* social */
+        /* FIM DO HORÁRIO */
+        /* SOCIAL */
     .contato h3{
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.15rem;
     }
-    .social{
-        text-align: center;
-        margin-top: 10px;
-        display: block;
-    }
-    .social a{
-        font-size: 0.9rem;
-        text-decoration: underline;
-        color: var(--ht-text);
-    }
-    /* localização */
+        /* FIM DE SOCIAL */
+
+        /* LOCALIZAZÃO */
     .loc h3{
-        font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.15rem;
     }
     .loc p{
-        margin-top: 10px;
         font-size: 0.9rem;
-        max-width: 250px;
-        line-height: 25px;
-        text-align: left;
     }
+        /* FIM DA LOCALIZAÇÃO */
+    /* FIM DE INFORMAÇÕES */
 }
 
 @media (max-width: 600px){
-    /* novidades */
-    .button a{
-        margin-bottom: 0px;
-    }
-    /* info - sobre */
-    .info {
+    /* HOME */
+    .home{
         display: block;
-        margin: auto;
     }
-    .imagem {
-        display: block;
-        margin: 0 auto;
-    }
-    .texto {
-        display: block;
-        max-width: 90%;
-        margin: 0 auto;
-    }
-    
-    .texto h3 {
-        margin-bottom: 25px;
-        text-indent: 0px;
-        text-align: center;
-    }
-    .texto p{
-        letter-spacing: 1px;
-        line-height: 20px;
-        
-    }
-    /* algumas infomação */
-    .loc-hora{
-        display: block;
-        font-size: 0.9rem;
-        text-align: center;
-        border: 0;
-        margin-top: 25px;
-        padding: 10px;
-    }
-    /* horário */
-    .horario{
-        border: 1px solid var(--sec);
-        font-size: 1rem;
-        padding: 8px;
+    .text h3{
+        font-size: 1.4rem;
         margin-bottom: 15px;
     }
-    .horario h3{
-        margin-bottom: 10px;
-        text-align: center;
-        font-weight: bold;
+    .text p{
         font-size: 1.2rem;
+    }
+    .text a{
+        margin: 15px auto;
+    }
+    .img img{
+        display: block;
+        margin: auto;
+        width: 280px;
+        height: 300px;
+    }
+    /* FIM DO HOME */
+    
+    /* INFORMAÇÕES */
+    .loc-hora{
+        font-size: 0.9rem;
+        padding: 20px;
+    }
+        /* HORÁRIO */
+    .horario{
+        font-size: 0.9rem;
+    }
+    .horario h3{
+        font-size: 0.9rem;
     }
     .horario p{
-        font-size: 0.9rem;
-        text-align: center;
         margin-top: 5px;
+        font-size: 0.8rem;
     }
-    /* social */
-    .contato{
-        border: 1px solid var(--sec);
-        margin-bottom: 10px;
-        padding: 8px;
-    }
+        /* FIM DO HORÁRIO */
+        /* SOCIAL */
     .contato h3{
-        margin-bottom: 10px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
-    .social{
-        text-align: center;
-        margin-top: 5px;
-        display: block;
+    .contato a{
+        font-size: 0.8rem;
     }
-    .social a{
-        text-decoration: underline;
-        color: var(--ht-text);
-    }
-    /* localização */
-    .loc{
-        border: 1px solid var(--sec);
-        margin-bottom: 10px;
-        padding: 8px;
-    }
+        /* FIM DE SOCIAL */
+
+        /* LOCALIZAZÃO */
     .loc h3{
-        margin-bottom: 10px;
-        font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
     .loc p{
-        font-size: 0.9rem;
-        margin: 0 auto;
-        max-width: 250px;
+        font-size: 0.8rem;
     }
+        /* FIM DA LOCALIZAÇÃO */
+    /* FIM DE INFORMAÇÕES */
 }
-
+/* PAREI EM 550PX ⬇⬇⬇⬇⬇ */
 @media (max-width: 550px){
     /* header */
     header{
